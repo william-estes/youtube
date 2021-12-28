@@ -13,9 +13,7 @@ def get_user_choice():
 def determine_winner(comp_choice, user_choice):
     if comp_choice == user_choice:
         print('Tied! Play again!')
-        return False
-
-    if comp_choice == 'ROCK':
+    elif comp_choice == 'ROCK':
         if user_choice == 'PAPER':
             print('You have won!')
         elif user_choice == 'SCISSORS':
@@ -30,16 +28,16 @@ def determine_winner(comp_choice, user_choice):
             print('You have won!')
         elif user_choice == 'PAPER':
             print('You have lost!')
-    return True
 
 
 def main():
-    has_winner = False
-    while not has_winner:
+    play_again = True
+    while play_again:
         comp_choice = random.choice(CHOICES)
         user_choice = get_user_choice()
         print(f'Computer has chosen {comp_choice}')
-        has_winner = determine_winner(comp_choice, user_choice)
+        determine_winner(comp_choice, user_choice)
+        play_again = input('Play again? 1 = yes, anything else for no: ') == '1'
 
 
 main()

@@ -5,4 +5,5 @@
 #   The user enters his or her choice of “rock,” “paper,” or “scissors” at the keyboard. 
 #   The computer’s choice is displayed. 
 #   The program should display a message indicating whether the user or the computer was the winner. 
-#   If both players make the same choice, the game must be played again to determine the winner.
+#   Ask the player if they'd like to play again
+#     if yes, play again. Otherwise exit
